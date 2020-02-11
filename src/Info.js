@@ -11,6 +11,9 @@ export class Info extends Component {
         if(this.props.isFetching){
             return <span>Loading...</span>
         }
+        if(this.props.error){
+            return <span>Error</span>
+        }
         return <span>Info: {this.props.data.origin}</span>
     }
 }
@@ -18,7 +21,8 @@ export class Info extends Component {
 const mapStateToProps = (state) => {
     return {
         isFetching: state.isFetching,
-        data: state.data
+        data: state.data,
+        error: state.error
     }
 }
 
