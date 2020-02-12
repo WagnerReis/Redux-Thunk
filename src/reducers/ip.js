@@ -3,7 +3,7 @@ const INITIAL_STATE = {
     isFetching: false,
     error: false
 }
-export const reducer = (state = INITIAL_STATE, action) => {
+const ip = (state = INITIAL_STATE, action) => {
     if (action.type === 'LOAD_DATA_REQUEST') {
         return {
             isFetching: true,
@@ -25,3 +25,5 @@ export const reducer = (state = INITIAL_STATE, action) => {
     }
     return state
 }
+
+export default ip
